@@ -8,6 +8,7 @@ router = Router()
 
 @router.get('/', response=list[ProductSchema])
 async def get_products(request):
-    products = await sync_to_async(Product.objects.all)()
+    qs = Product.objects.all()
+    products = await sync_to_async(list)(qs)
 
     return products
