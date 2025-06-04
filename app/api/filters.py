@@ -7,8 +7,7 @@ class ProductFilterSchema(FilterSchema):
     name: Optional[str] = None
     name__icontains: Optional[str] = None
     price: Optional[Decimal] = None
-    price__lt: Optional[Decimal] = None 
-    price__gt: Optional[Decimal] = None
+    price__lt: Optional[Decimal] = None
     price__gte: Optional[Decimal] = None
     price__lte: Optional[Decimal] = None
     tags__icontains: Optional[str] = None
